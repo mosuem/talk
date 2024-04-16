@@ -1,0 +1,1 @@
+Assets: ((package:i18n_talk_library/i18n_talk_library.dart, /home/mosum/projects/talk/i18n_talk_library_2/assets/libformat.so)), true
