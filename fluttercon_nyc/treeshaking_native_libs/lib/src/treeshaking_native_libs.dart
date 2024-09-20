@@ -3,10 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'treeshaking_native_libs_bindings_generated.dart' as bindings;
-import 'package:meta/meta.dart';
 
-@RecordUse()
 int add(int a, int b) => bindings.add(a, b);
 
-@RecordUse()
 int multiply(int a, int b) => bindings.multiply(a, b);
