@@ -1,0 +1,1 @@
+Some text2: /home/mosum/projects/talk/use_assets/assets/test.txt

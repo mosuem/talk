@@ -1,0 +1,17 @@
+name: linking_example
+description: A sample command-line application.
+
+environment:
+  sdk: ^3.6.0-78.0.dev
+
+dependencies:
+  asset:
+    path: ../../../../dart-sdk/sdk/pkg/asset/
+  native_assets_cli:
+    path: ../../../../dart-sdk/sdk/third_party/pkg/native/pkgs/native_assets_cli
+  collection: ^1.19.0
+  meta: ^1.16.0
+  record_use: ^0.3.0
+
+dev_dependencies:
+  lints: ^4.0.0
