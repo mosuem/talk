@@ -24,19 +24,12 @@ void main(List<String> arguments) async {
   await link(
     arguments,
     (config, output) async {
-      final usages = await extractUsages(config);
-
-      final symbols = [addIdentifier, multiplyIdentifier]
-          .where((identifier) => usages.argumentsTo(identifier) != null)
-          .map((identifier) => identifier.name)
-          .toList();
-
       final staticLibrary = config.assets.single;
 
       final linker = CLinker.library(
         name: config.packageName,
         assetName: staticLibrary.id.split('/').skip(1).join('/'),
-        linkerOptions: LinkerOptions.treeshake(symbols: symbols),
+        linkerOptions: LinkerOptions.treeshake(symbols: ['add']),
         sources: [staticLibrary.file!.toFilePath()],
       );
       await linker.run(
