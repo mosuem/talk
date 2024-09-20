@@ -5,17 +5,6 @@
 import 'package:logging/logging.dart';
 import 'package:native_assets_cli/native_assets_cli.dart';
 import 'package:native_toolchain_c/native_toolchain_c.dart';
-import 'package:record_use/record_use.dart';
-
-const addIdentifier = const Identifier(
-  importUri: 'package:treeshaking_native_libs/src/treeshaking_native_libs.dart',
-  name: 'add',
-);
-
-const multiplyIdentifier = const Identifier(
-  importUri: 'package:treeshaking_native_libs/src/treeshaking_native_libs.dart',
-  name: 'multiply',
-);
 
 void main(List<String> arguments) async {
   await link(
