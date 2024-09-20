@@ -2,9 +2,6 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-import 'dart:convert';
-import 'dart:io';
-
 import 'package:logging/logging.dart';
 import 'package:native_assets_cli/native_assets_cli.dart';
 import 'package:native_toolchain_c/native_toolchain_c.dart';
@@ -43,13 +40,4 @@ void main(List<String> arguments) async {
       );
     },
   );
-}
-
-// temporary helper method
-Future<RecordedUsages> extractUsages(LinkConfig config) async {
-  final usagesFile = config.recordedUsagesFile;
-  final usagesContent = await File.fromUri(usagesFile!).readAsString();
-  final usagesJson = jsonDecode(usagesContent) as Map<String, dynamic>;
-  final usages = RecordedUsages.fromJson(usagesJson);
-  return usages;
 }
