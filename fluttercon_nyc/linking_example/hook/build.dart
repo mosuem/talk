@@ -1,21 +1,18 @@
 import 'package:asset/hook.dart';
 
-const standardAsset = 'standard_content';
-var premiumAsset = 'premium_content';
-
-void main(List<String> args) {
+void main(List<String> arguments) {
   build(
-    args,
+    arguments,
     (config, output) async {
-      final dataAssetBuilder = DataAssetBuilder(config, output);
-      dataAssetBuilder.addStringAsset(
-        name: standardAsset,
-        file: config.packageRoot.resolve('assets/standard_content.json'),
-      );
-      dataAssetBuilder.addStringAsset(
-        name: premiumAsset,
-        file: config.packageRoot.resolve('assets/premium_content.json'),
-      );
+      DataAssetBuilder(config, output)
+        ..addStringAsset(
+          name: 'standard_content',
+          file: config.packageRoot.resolve('assets/standard_content.json'),
+        )
+        ..addStringAsset(
+          name: 'premium_content',
+          file: config.packageRoot.resolve('assets/premium_content.json'),
+        );
     },
   );
 }
