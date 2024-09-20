@@ -52,6 +52,7 @@ void main(List<String> arguments) async {
   );
 }
 
+// temporary helper method
 Future<RecordedUsages> extractUsages(LinkConfig config) async {
   final usagesFile = config.recordedUsagesFile;
   final usagesContent = await File.fromUri(usagesFile!).readAsString();
